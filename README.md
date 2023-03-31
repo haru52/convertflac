@@ -5,7 +5,7 @@
 [![Test](https://github.com/haru52/convertflac/actions/workflows/test.yml/badge.svg)](https://github.com/haru52/convertflac/actions/workflows/test.yml)
 [![Release](https://github.com/haru52/convertflac/actions/workflows/release.yml/badge.svg)](https://github.com/haru52/convertflac/actions/workflows/release.yml)
 [![CodeQL](https://github.com/haru52/convertflac/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/haru52/convertflac/actions/workflows/github-code-scanning/codeql)
-[![Copy/Paste](report/jscpd-badge.svg)](report/jscpd-report.md)
+[![Copy/Paste](https://github.com/haru52/convertflac/blob/main/report/jscpd-badge.svg)](https://github.com/haru52/convertflac/blob/main/report/jscpd-report.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](https://haru52.github.io/convertflac/CODE_OF_CONDUCT.html)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](https://commitizen.github.io/cz-cli/)
 [![semantic-release: conventionalcommits](https://img.shields.io/badge/semantic--release-conventionalcommits-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
