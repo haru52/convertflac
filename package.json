@@ -7,7 +7,6 @@
     "node": "^18.15.0",
     "npm": "^9.6.2"
   },
-  "main": "index.js",
   "scripts": {
     "lint": "run-s --continue-on-error lint:*",
     "lint:credentials": "[ \"$CI\" = 'true' ] || secretlint \"**/*\"",
