@@ -32,9 +32,9 @@ def escape(string):
     return string.translate(string.maketrans({'[': '[[]', ']': '[]]'}))
 
 
-def encode(in_dir_path, out_root_dir_path):
+def encode(codec, in_dir_path, out_root_dir_path):
     for f in glob.glob(os.path.join(escape(in_dir_path), '*')):
-        if os.path.basename(f) == DEFAULT_OUT_DIR_NAME:
+        if os.path.basename(f) == codec:
             continue
         if os.path.isdir(f):
             out_dir_path = os.path.join(out_root_dir_path, os.path.basename(f))
@@ -44,21 +44,34 @@ def encode(in_dir_path, out_root_dir_path):
 
     for in_path in glob.glob(os.path.join(escape(in_dir_path), '*.flac')):
         in_basename = os.path.splitext(os.path.basename(in_path))[0]
-        out_path = os.path.join(out_root_dir_path, in_basename + '.m4a')
-        ffmpeg_argv = [
+        ext = 'm4a' if codec == 'alac' else 'mp3'
+        out_path = os.path.join(out_root_dir_path, f'{in_basename}.{ext}')
+        ffmpeg_argv = ([
             'ffmpeg',
             '-i',
             in_path,
-            '-ab',
-            '320k',
+            '-codec:a',
+            'alac',
             # Use `-codec:v copy` to preserve the album artwork
             # https://stackoverflow.com/questions/74957184/ffmpeg-converting-flac-to-mp3-changes-front-cover-image-format-and-size
             '-codec:v',
             'copy',
             '-n',
-            out_path]
+            out_path
+        ]
+            if codec == 'alac'
+            else [
+            'ffmpeg',
+            '-i',
+            in_path,
+            '-ab',
+            '320k',
+            '-codec:v',
+            'copy',
+            '-n',
+            out_path])
         try:
-            print('\nEncoding ' + in_path + '\n')
+            print(f'\nEncoding {in_path}\n')
             subprocess.run(ffmpeg_argv)
         except Exception as e:
             print(e, file=sys.stderr)
@@ -66,10 +79,19 @@ def encode(in_dir_path, out_root_dir_path):
 
 @click.command(context_settings=CONTEXT_SETTINGS)
 @click.version_option(version=VersionGetter.run(), prog_name='convertflac')
+@click.option('-c', '--codec', default='alac',
+              help='Set the output codec (alac or mp3. Default: alac).')
 @click.argument(INPUT_DIRECTORY_PATH)
 @click.argument(OUTPUT_DIRECTORY_PATH, default=os.getcwd())
-def main(input_directory_path, output_directory_path):
-    """Convert FLAC audio files into MP3 320kbps CBR files."""
+def main(codec, input_directory_path, output_directory_path):
+    """Convert FLAC audio files into Apple Lossless Audio Codec (ALAC) or\
+        MP3 320kbps CBR files."""
+
+    SUPPORTED_CODECS = ['alac', 'mp3']
+    if codec not in SUPPORTED_CODECS:
+        raise click.BadParameter(
+            f"{codec}. Codec must be one of {', '.join(SUPPORTED_CODECS)}"
+        )
 
     for arg_name, path in [
         (INPUT_DIRECTORY_PATH.upper(), input_directory_path),
@@ -80,13 +102,13 @@ def main(input_directory_path, output_directory_path):
     in_basename = os.path.basename(input_directory_path)
     raw_out_dir_path = os.path.join(output_directory_path, in_basename)
     out_dir_path = (
-        os.path.join(output_directory_path, DEFAULT_OUT_DIR_NAME, in_basename)
+        os.path.join(output_directory_path, codec, in_basename)
         if is_same_path(input_directory_path, raw_out_dir_path)
         else raw_out_dir_path)
     if not os.path.exists(out_dir_path):
         os.makedirs(out_dir_path)
 
-    encode(input_directory_path, out_dir_path)
+    encode(codec, input_directory_path, out_dir_path)
 
 
 if __name__ == '__main__':
