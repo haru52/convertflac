@@ -40,7 +40,7 @@ def encode(codec, in_dir_path, out_root_dir_path):
             out_dir_path = os.path.join(out_root_dir_path, os.path.basename(f))
             if not os.path.exists(out_dir_path):
                 os.mkdir(out_dir_path)
-            encode(f, out_dir_path)
+            encode(codec, f, out_dir_path)
 
     for in_path in glob.glob(os.path.join(escape(in_dir_path), '*.flac')):
         in_basename = os.path.splitext(os.path.basename(in_path))[0]
