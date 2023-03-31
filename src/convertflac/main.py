@@ -78,9 +78,9 @@ def encode(codec, in_dir_path, out_root_dir_path):
 
 
 @click.command(context_settings=CONTEXT_SETTINGS)
-@click.version_option(version=VersionGetter.run(), prog_name='convertflac')
 @click.option('-c', '--codec', default='alac',
               help='Set the output codec (alac or mp3. Default: alac).')
+@click.version_option(version=VersionGetter.run(), prog_name='convertflac')
 @click.argument(INPUT_DIRECTORY_PATH)
 @click.argument(OUTPUT_DIRECTORY_PATH, default=os.getcwd())
 def main(codec, input_directory_path, output_directory_path):

@@ -36,8 +36,8 @@ Usage: convertflac [OPTIONS] INPUT_DIRECTORY_PATH
   MP3 320kbps CBR files.
 
 Options:
-  --version         Show the version and exit.
   -c, --codec TEXT  Set the output codec (alac or mp3. Default: alac).
+  --version         Show the version and exit.
   -h, --help        Show this message and exit.
 ```
 
