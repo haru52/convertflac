@@ -30,7 +30,8 @@
     "encoder",
     "flac",
     "alac",
-    "mp3"
+    "mp3",
+    "cli"
   ],
   "author": {
     "name": "haru",
