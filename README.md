@@ -1,4 +1,6 @@
-# convertflac: Convert FLAC
+<!-- vale Microsoft.HeadingAcronyms = NO -->
+# convertflac: Convert FLAC CLI
+<!-- vale Microsoft.HeadingAcronyms = YES -->
 
 [![Test](https://github.com/haru52/convertflac/actions/workflows/test.yml/badge.svg)](https://github.com/haru52/convertflac/actions/workflows/test.yml)
 [![Release](https://github.com/haru52/convertflac/actions/workflows/release.yml/badge.svg)](https://github.com/haru52/convertflac/actions/workflows/release.yml)
@@ -8,7 +10,7 @@
 
 ## Overview
 
-convertflac converts FLAC audio files into MP3 files.
+convertflac converts FLAC audio files into ALAC or MP3 files.
 
 ## Requirements
 
@@ -25,16 +27,19 @@ pip install convertflac
 ## Usage
 
 ```console
-Usage: convertflac [OPTIONS] INPUT_DIRECTORY_PATH [OUTPUT_DIRECTORY_PATH]
+Usage: convertflac [OPTIONS] INPUT_DIRECTORY_PATH
+                   [OUTPUT_DIRECTORY_PATH]
 
-  Convert FLAC audio files into MP3 320kbps CBR files.
+  Convert FLAC audio files into Apple Lossless Audio Codec (ALAC) or
+  MP3 320kbps CBR files.
 
 Options:
-  --version   Show the version and exit.
-  -h, --help  Show this message and exit.
+  --version         Show the version and exit.
+  -c, --codec TEXT  Set the output codec (alac or mp3. Default: alac).
+  -h, --help        Show this message and exit.
 ```
 
-If you don't input `[OUTPUT_DIRECTORY_PATH]`, convertflac makes `mp3` directory in the current directory and sets this `mp3/` as the output directory.
+If you don't input `[OUTPUT_DIRECTORY_PATH]`, convertflac makes `alac` or `mp3` directory in the current directory and sets this `alac/` or `mp3/` as the output directory.
 
 ## Update
 
@@ -50,10 +55,10 @@ pip uninstall convertflac
 
 ## Description
 
-- convertflac converts FLAC audio files into MP3 320kbps CBR files
+- convertflac converts FLAC audio files into Apple Lossless Audio Codec (ALAC) or MP3 320kbps CBR files
 - The output preserves the input directory structure
-- The output MP3 files preserve the input FLAC files' metadata
-- If a MP3 file with the same name already exists at the output directory, convertflac doesn't overwrite it
+- The output ALAC/MP3 files preserve the input FLAC files' metadata
+- If an ALAC/MP3 file with the same name already exists at the output directory, convertflac doesn't overwrite it
 
 ## Versioning policy
 

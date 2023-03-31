@@ -3,10 +3,10 @@
 
 ## Supported Versions
 
-| Version                                                       | Supported |
-| ------------------------------------------------------------- | --------- |
+| Version                                                         | Supported |
+| --------------------------------------------------------------- | --------- |
 | [Latest](https://github.com/haru52/convertflac/releases/latest) | ✅        |
-| Others                                                        | ❌        |
+| Others                                                          | ❌        |
 
 ## Reporting a Vulnerability
 

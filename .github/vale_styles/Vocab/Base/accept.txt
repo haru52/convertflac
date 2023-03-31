@@ -1,6 +1,9 @@
 actionlint
+ALAC
 CBR
+Codec
 Contributing Guideline
+Convert FLAC CLI
 convertflac
 FFmpeg
 FLAC

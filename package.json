@@ -1,7 +1,7 @@
 {
   "name": "convertflac",
   "version": "0.1.0",
-  "description": "Convert FLAC audio files into MP3 files.",
+  "description": "Convert FLAC audio files into ALAC or MP3 files.",
   "private": true,
   "engines": {
     "node": "^18.15.0",
@@ -27,9 +27,10 @@
   },
   "keywords": [
     "audio",
-    "encoder",
     "converter",
+    "encoder",
     "flac",
+    "alac",
     "mp3"
   ],
   "author": {
