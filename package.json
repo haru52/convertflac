@@ -1,0 +1,63 @@
+{
+  "name": "convertflac",
+  "version": "0.1.0",
+  "description": "Convert FLAC audio files into MP3 files.",
+  "private": true,
+  "engines": {
+    "node": "^18.15.0",
+    "npm": "^9.6.2"
+  },
+  "main": "index.js",
+  "scripts": {
+    "lint": "run-s --continue-on-error lint:*",
+    "lint:credentials": "[ \"$CI\" = 'true' ] || secretlint \"**/*\"",
+    "lint:md": "markdownlint . \".?*/**/*.{md,markdown}\"",
+    "lint:prettier": "prettier --check .",
+    "format": "run-s --continue-on-error format:*",
+    "format:md": "npm run lint:md -- --fix",
+    "format:prettier": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "commit": "cz",
+    "cm": "npm run commit",
+    "prepare": "[ \"$CI\" = 'true' ] || husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haru52/convertflac.git"
+  },
+  "keywords": [
+    "audio",
+    "encoder",
+    "converter",
+    "flac",
+    "mp3"
+  ],
+  "author": {
+    "name": "haru",
+    "url": "https://haru52.com/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haru52/convertflac/issues"
+  },
+  "homepage": "https://github.com/haru52/convertflac#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@commitlint/cz-commitlint": "^17.5.0",
+    "@secretlint/secretlint-rule-preset-recommend": "^6.2.3",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/exec": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
+    "commitizen": "^4.3.0",
+    "conventional-changelog-conventionalcommits": "^5.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "markdownlint-cli": ">=0.33.0 <1.0.0",
+    "npm-check-updates": "^16.8.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.8.7",
+    "secretlint": "^6.2.3",
+    "semantic-release": "^21.0.0"
+  }
+}

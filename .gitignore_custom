@@ -1,0 +1,11 @@
+### Custom
+
+# direnv
+.envrc
+.env
+
+# Vale
+/.github/vale_styles/Microsoft/
+/.github/vale_styles/write-good/
+
+

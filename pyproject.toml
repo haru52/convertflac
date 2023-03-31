@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling", "hatch-nodejs-version"]
+build-backend = "hatchling.build"
+
+[project]
+readme = "README.md"
+requires-python = "~=3.11"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+  "click ~= 8.1"
+]
+dynamic = [
+  "name",
+  "version",
+  "authors",
+  "description",
+  "license",
+  "homepage",
+  "repository",
+  "keywords",
+  "urls"
+]
+
+[project.scripts]
+convertflac = "convertflac.main:main"

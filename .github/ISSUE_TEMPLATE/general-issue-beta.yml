@@ -1,0 +1,49 @@
+---
+name: General issue (beta)
+description: General issue (beta).
+labels: []
+body:
+  - type: textarea
+    id: deadline
+    attributes:
+      label: Deadline
+      description: By when should this issue be completed? And why?
+      placeholder: e.g., yyyy-MM-dd
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      description: What is required to start this issue?
+      placeholder: |
+        All the following issues are resolved.
+
+        - #1
+        - #2
+  - type: textarea
+    id: tasks
+    attributes:
+      label: Tasks
+      description: What tasks does this issue consist of?
+      placeholder: |
+        - [ ] Task A
+        - [ ] Task B
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What is the goal of this issue?
+      placeholder: Completion of all the tasks.
+      value: Completion of all the tasks.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Input the detailed description of this issue.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Input references of this issue.
+      placeholder: |
+        - [Reference A](https://example.com/)
+        - #3

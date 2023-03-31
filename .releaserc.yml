@@ -1,0 +1,35 @@
+---
+# https://semantic-release.gitbook.io/semantic-release/usage/configuration#branches
+# Default: ['+([0-9])?(.{+([0-9]),x}).x', 'master', 'next', 'next-major',
+#          {name: 'beta', prerelease: true}, {name: 'alpha', prerelease: true}]
+branches:
+  - +([0-9])?(.{+([0-9]),x}).x
+  - main
+  - next
+  - next-major
+  - name: beta
+    prerelease: true
+  - name: alpha
+    prerelease: true
+plugins:
+  - "@semantic-release/commit-analyzer"
+  - "@semantic-release/release-notes-generator"
+  -
+    - "@semantic-release/changelog"
+    - changelogFile: docs/CHANGELOG.md
+  - "@semantic-release/npm"
+  -
+    - "@semantic-release/git"
+    # https://github.com/semantic-release/git#options
+    # Default: ['CHANGELOG.md', 'package.json', 'package-lock.json',
+    #          'npm-shrinkwrap.json']
+    - assets:
+        - docs/CHANGELOG.md
+        - package.json
+        - package-lock.json
+        - npm-shrinkwrap.json
+  -
+    - "@semantic-release/exec"
+    - publishCmd: "bin/build.sh && bin/publish.sh"
+  - "@semantic-release/github"
+preset: conventionalcommits

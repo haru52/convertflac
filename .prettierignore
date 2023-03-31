@@ -1,0 +1,14 @@
+# Use markdownlint-cli instead of Prettier
+*.md
+*.markdown
+
+# Use yamllint instead of Prettier
+*.yml
+*.yaml
+
+# 3rd party code
+/.github/vale_styles/
+
+# Pipenv
+Pipfile
+Pipfile.lock

@@ -1,0 +1,17 @@
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+insert_final_newline = true
+
+[{Makefile,*.go}]
+indent_style = tab
+
+[*.{md,markdown}]
+trim_trailing_whitespace = false
+
+[*.py]
+indent_size = 4

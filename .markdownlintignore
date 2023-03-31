@@ -1,0 +1,4 @@
+node_modules/
+/.github/vale_styles/
+/docs/CHANGELOG.md
+/docs/CODE_OF_CONDUCT.md
