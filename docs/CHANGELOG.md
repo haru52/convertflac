@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/haru52/convertflac/compare/v1.0.2...v1.0.3) (2023-03-31)
+
+
+### Bug Fixes
+
+* **chore:** change the order of options in help message ([6d2ae47](https://github.com/haru52/convertflac/commit/6d2ae47cd1e7113177667d070778c605ae706728))
+
 ## [1.0.2](https://github.com/haru52/convertflac/compare/v1.0.1...v1.0.2) (2023-03-31)
 
 
