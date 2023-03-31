@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/haru52/convertflac/compare/v1.0.1...v1.0.2) (2023-03-31)
+
+
+### Bug Fixes
+
+* **docs:** update README.md ([93f03ed](https://github.com/haru52/convertflac/commit/93f03edd5cd8d8bd39a868c63bb73864f477ee30))
+
 ## [1.0.1](https://github.com/haru52/convertflac/compare/v1.0.0...v1.0.1) (2023-03-31)
 
 
