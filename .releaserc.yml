@@ -28,6 +28,7 @@ plugins:
         - package.json
         - package-lock.json
         - npm-shrinkwrap.json
+        - report
   -
     - "@semantic-release/exec"
     - publishCmd: "bin/build.sh && bin/publish.sh"

@@ -16,9 +16,11 @@
     "format:md": "npm run lint:md -- --fix",
     "format:prettier": "prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "jscpd": "jscpd src bin",
     "commit": "cz",
     "cm": "npm run commit",
-    "prepare": "[ \"$CI\" = 'true' ] || husky install"
+    "prepare": "[ \"$CI\" = 'true' ] || husky install",
+    "postversion": "npm run jscpd"
   },
   "repository": {
     "type": "git",
@@ -46,6 +48,7 @@
     "@commitlint/cli": "^17.5.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/cz-commitlint": "^17.5.0",
+    "@jscpd/badge-reporter": "^3.4.5",
     "@secretlint/secretlint-rule-preset-recommend": "^6.2.3",
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/exec": "^6.0.3",
@@ -53,6 +56,7 @@
     "commitizen": "^4.3.0",
     "conventional-changelog-conventionalcommits": "^5.0.0",
     "husky": "^8.0.3",
+    "jscpd": "^3.5.4",
     "lint-staged": "^13.2.0",
     "markdownlint-cli": ">=0.33.0 <1.0.0",
     "npm-check-updates": "^16.9.0",
