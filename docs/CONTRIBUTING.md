@@ -11,6 +11,7 @@
 | [yamllint](https://yamllint.readthedocs.io/)                | ^1.30.0                                                                                             |
 | [ShellCheck](https://github.com/koalaman/shellcheck#readme) | >=0.9.0 <1.0.0                                                                                      |
 | [actionlint](https://github.com/rhysd/actionlint#readme)    | [.tool-versions](https://github.com/haru52/convertflac/blob/main/.tool-versions)                    |
+| Python                                                      | [.python-version](https://github.com/haru52/convertflac/blob/main/.python-version#L1)               |
 | Pipenv                                                      | >=2023.3.20                                                                                         |
 
 ## Rules
