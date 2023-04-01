@@ -8,7 +8,6 @@ import click
 from .version_getter import VersionGetter
 
 CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
-DEFAULT_OUT_DIR_NAME = 'mp3'
 INPUT_DIRECTORY_PATH = 'input_directory_path'
 OUTPUT_DIRECTORY_PATH = 'output_directory_path'
 
