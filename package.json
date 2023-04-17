@@ -45,7 +45,7 @@
   },
   "homepage": "https://github.com/haru52/convertflac#readme",
   "devDependencies": {
-    "@commitlint/cli": "^17.5.1",
+    "@commitlint/cli": "^17.6.1",
     "@commitlint/config-conventional": "^17.4.4",
     "@commitlint/cz-commitlint": "^17.5.0",
     "@jscpd/badge-reporter": "^3.4.5",
