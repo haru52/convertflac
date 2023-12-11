@@ -25,7 +25,7 @@ jobs:
         with:
           node-version-file: .node-version
           cache: npm
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           cache: pipenv
       - name: Install dependencies
