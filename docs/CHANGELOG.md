@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/haru52/convertflac/compare/v1.0.3...v1.0.4) (2024-01-31)
+
+
+### Bug Fixes
+
+* bump yaml from 2.2.1 to 2.2.2 ([6780dfc](https://github.com/haru52/convertflac/commit/6780dfc04ff18d303c8b7e0fa61a98b0935e9716))
+
 ## [1.0.3](https://github.com/haru52/convertflac/compare/v1.0.2...v1.0.3) (2023-03-31)
 
 
